@@ -15,4 +15,4 @@ This package does not upload any data.
 1. Import your iPhone's photos to your Mac, official instructions [here](https://support.apple.com/en-us/HT201302#importmac)
 2. Open your terminal
    1. To install the package, run `pip3 install BestPix`
-   2. To see the results, first, run `reveal`, then use your internet browswer to go to `localhost:8442`
+   2. To see the results, first, run `reveal`, then use your internet browser to go to `localhost:8442`
