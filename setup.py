@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='bestpix',
-    version='1.2.2',
+    version='1.2.3',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
-    scripts=['scripts/reveal'],
+    scripts=['scripts/reveal', 'scripts/cleanup'],
     license='GNU GPLv3',
     author='Michael Chuprin',
     author_email='mkchuprin@gmail.com',

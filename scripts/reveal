@@ -8,7 +8,7 @@ import bestpix
 os.system('clear')
 time.sleep(1)
 
-# copy the contencts of the host's "Photos Library.photoslibrary" to to mirrormirror_data 
+# copy the contents of the host's "Photos Library.photoslibrary" to to mirrormirror_data 
 photos_src = os.path.join(os.path.expanduser('~'), 'Pictures', 'Photos Library.photoslibrary')
 photos_dst = os.path.join(os.path.expanduser('~'), 'bestpix_data')
 
