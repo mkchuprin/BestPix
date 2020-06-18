@@ -25,6 +25,8 @@ print(f'      to: {photos_dst}')
 print()
 shutil.copytree(photos_src, photos_dst)
 
-print('Getting best pictures')
+command = f'docker run --rm -it -p 127.0.0.1:8442:8442 --volume {photos_dst}:/opt/bestpix_data bluehalswater/bestpix'
+
+print(f'Running command: {command}')
 print()
-bestpix.main()
+os.system(command)
