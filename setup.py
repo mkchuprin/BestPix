@@ -11,7 +11,7 @@ setup(
     author='Michael Chuprin',
     author_email='mkchuprin@gmail.com',
     url='https://github.com/mkchuprin/BestPix',
-    install_requires=['Flask==1.1.2', 'pyheif==0.4', 'Pillow==7.1.2'],
+    install_requires=['Flask', 'pyheif', 'Pillow'],
     packages=['bestpix'],
     include_package_data=True,
 )
