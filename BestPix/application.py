@@ -9,6 +9,7 @@ from shutil import rmtree
 from .config import PHOTOS_PATH, NUMBER_OF_PHOTOS
 
 app = Flask(__name__)
+app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
 
 def get_best_photos_from_database():
@@ -86,5 +87,5 @@ def home():
 
 def main():
 
-    app.run(debug=False, host="localhost", port=8442) 
+    app.run(debug=True, host="localhost", port=8442) 
 
