@@ -10,4 +10,5 @@ setup(
     license='GNU GPLv3',
     author='Michael Chuprin',
     author_email='mkchuprin@gmail.com',
+    url='https://github.com/mkchuprin/BestPix'
 )
