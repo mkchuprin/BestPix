@@ -5,7 +5,11 @@ See the photos your iPhone thinks are best
 ## Description 
 
 Each time you use your iPhone to take a picture, the iPhone will give that picture a score.
-This package shows you the 10 highest rated photos.
+This package shows you the 10 highest rated photos. 
+
+## Privacy
+
+This package does not upload any data. 
 
 
 ##  Setup
