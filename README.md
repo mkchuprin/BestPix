@@ -1,6 +1,6 @@
 # BestPix
 
-See the photos your iPhone thinks are best
+See the photos your iPhone thinks are best.
 
 ## Description 
 
