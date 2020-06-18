@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Beautiful</title>
+</head>
+
+<body>
+
+{% for score_and_photo in scores_and_photos %}
+
+    <h1>#{{ loop.index0 + 1}} with a beauty score of {{ scores_and_photos[loop.index0][0]  }} </h3>
+    <img src="{{url_for('static', filename=scores_and_photos[loop.index0][1]) }}", style='height: 75%; width: 75%; object-fit: contain' >
+
+{% endfor %} 
+</body>
+</html>
