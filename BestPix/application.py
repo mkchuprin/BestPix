@@ -18,7 +18,7 @@ def get_best_photos_from_database():
         (list of tuples): tuples are (filename, score)
     """
 
-    db_path = os.path.join('/opt', 'bestpix_data', 'database', 'Photos.sqlite')
+    db_path = os.path.join(os.path.expanduser('~'), 'bestpix_data', 'database', 'Photos.sqlite')
     cursor  = connect(db_path).cursor()
 
     query_result = cursor.execute("""
@@ -50,7 +50,7 @@ def prepare_photos(filenames_and_scores):
         (list of tuples): tuples are (filename, score)
     """
 
-    static_folder = os.path.join('/opt', 'BestPix', 'static')
+    static_folder = os.path.join(os.path.expanduser('~'), 'BestPix', 'static')
 
     create_folder_if_not_exists(static_folder)
 
@@ -58,7 +58,7 @@ def prepare_photos(filenames_and_scores):
     for filename_and_score in filenames_and_scores:
         score_as_percent = f"{round(filename_and_score[1]*100)}%"
         filename         = filename_and_score[0]
-        filepath         = os.path.join('/opt', 'bestpix_data', 'originals', filename[0], filename) 
+        filepath         = os.path.join(os.path.expanduser('~'), 'bestpix_data', 'originals', filename[0], filename) 
 
         if filename.endswith('heic'):
             heif_file = read_heif(filepath)
