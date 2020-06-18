@@ -6,7 +6,7 @@ from pyheif import read_heif
 from sqlite3 import connect
 from shutil import rmtree
 
-from config import PHOTOS_PATH, NUMBER_OF_PHOTOS
+from .config import PHOTOS_PATH, NUMBER_OF_PHOTOS
 
 app = Flask(__name__)
 
@@ -84,8 +84,7 @@ def home():
     return render_template('home.html', scores_and_photos = prepared_photos)
 
 
-if __name__ == '__main__':
+def main():
 
-    app.run(debug=False, host="0.0.0.0", port=8442) 
-
+    app.run(debug=False, host="localhost", port=8442) 
 

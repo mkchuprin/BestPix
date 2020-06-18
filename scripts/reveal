@@ -3,6 +3,7 @@
 import os
 import time
 import shutil
+import bestpix
 
 os.system('clear')
 time.sleep(1)
@@ -24,10 +25,6 @@ print(f'      to: {photos_dst}')
 print()
 shutil.copytree(photos_src, photos_dst)
 
-
-command = f'docker run --rm -it -p 127.0.0.1:8442:8442 --volume {photos_dst}:/opt/bestpix_data bluehalswater/bestpix'
-
-print(f'Running command: {command}')
+print('Getting best pictures')
 print()
-os.system(command)
-
+bestpix.main()
