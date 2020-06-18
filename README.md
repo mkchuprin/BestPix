@@ -12,7 +12,9 @@ This package does not upload any data.
 
 
 ## Install 
-1. Open your terminal and run the command `pip install bestpix`
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+2. Start Docker (if it hasn't started)
+3. Open your terminal and run the command `pip install bestpix`
 
 ## Use
 1. Import your iPhone's photos to your Mac. Official instructions [here](https://support.apple.com/en-us/HT201302#importmac)
