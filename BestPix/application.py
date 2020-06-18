@@ -50,7 +50,7 @@ def prepare_photos(filenames_and_scores):
         (list of tuples): tuples are (filename, score)
     """
 
-    static_folder = os.path.join(os.path.expanduser('~'), 'BestPix', 'static')
+    static_folder = os.path.join(os.path.dirname('__file__'), 'static')
 
     create_folder_if_not_exists(static_folder)
 
