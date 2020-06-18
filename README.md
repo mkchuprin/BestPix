@@ -1,6 +1,6 @@
 # BestPix
 
-Use your Mac to see the photos your iPhone thinks are best.
+Use your Mac to see the photos your iPhone thinks are best. Inspired by Simon Willison's [Pelican post](https://simonwillison.net/2020/May/21/dogsheep-photos/)!
 
 ## Description 
 
