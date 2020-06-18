@@ -10,5 +10,6 @@ setup(
     license='GNU GPLv3',
     author='Michael Chuprin',
     author_email='mkchuprin@gmail.com',
-    url='https://github.com/mkchuprin/BestPix'
+    url='https://github.com/mkchuprin/BestPix',
+    install_requires=['Flask==1.1.2', 'pyheif==0.5.0', 'Pillow==7.1.2']
 )
