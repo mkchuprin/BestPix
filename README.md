@@ -4,7 +4,7 @@ Use your Mac to see the photos your iPhone thinks are best.
 
 ## Description 
 
-Each time you use your iPhone to take a picture, the iPhone will give it  a "beautifulness" score. This package shows you the 10 highest rated photos.
+Each time you take a photo with your iPhone, a "beautifulness" score is given to that photo. This package shows you the 10 highest scoring photos.
 
 ## Privacy
 
