@@ -17,8 +17,9 @@ No data leaves your computer.
 
 ## Install 
 
-1. Install and start [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
-2. Open your terminal and run the command `pip install bestpix`
+1. Install [python3](https://www.python.org/downloads/)
+2. Install and start [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
+3. Open your terminal and run the command `pip3 install bestpix`
 
 ## Use
 
@@ -28,5 +29,5 @@ No data leaves your computer.
 
 ## Uninstall 
 
-1. Open your terminal and run the command `cleanup`, then the command `pip uninstall bestpix`
+1. Open your terminal and run the command `cleanup`, then the command `pip3 uninstall bestpix`
 2. Shutdown and uninstall Docker Desktop
