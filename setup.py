@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bestpix',
-    version='1.3.7s',
+    version='1.3.7',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
     scripts=['scripts/reveal', 'scripts/cleanup'],
