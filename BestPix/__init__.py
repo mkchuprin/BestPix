@@ -1,1 +1,1 @@
-from .application import main
+from .photos_interface import PhotosInterface

@@ -10,38 +10,12 @@ NUMBER_OF_PHOTOS = 10
 
 app = Flask(__name__)
 
-def get_best_photos_from_database():
-    """Connect to the photos database and get the highest rated photos
+def get_filenames_and_scores():
 
-    Returns:
-        (list of tuples): tuples are (filename, score)
-    """
+    filenames_and_scores_filepath = '/opt/bestpix_data/scores.csv'
 
-    db_path = os.path.join('/opt', 'bestpix_data', 'database', 'Photos.sqlite')
-    cursor  = connect(db_path).cursor()
-
-    try:
-
-        query_result = cursor.execute("""
-
-        SELECT zfilename, 
-            zoverallaestheticscore 
-        FROM   zgenericasset 
-        ORDER  BY zoverallaestheticscore DESC 
-
-        """).fetchall()
-    
-    except:
-        print()
-        print()
-        print('Error: Photos.sqlite is empty. You must import your photos first. Guide here: https://support.apple.com/en-us/HT201302#importmac')
-        print()
-        print()
-        exit()
-
-    print(f'Analyzing {len(query_result)} photos')
-
-    return query_result[:NUMBER_OF_PHOTOS]
+    with open(filenames_and_scores_filepath, 'r') as f:
+        return [[x.split(', ')[0], float(x.split(', ')[1])] for x in f.read().splitlines()]
 
 def create_folder_if_not_exists(folder):
 
@@ -51,7 +25,7 @@ def create_folder_if_not_exists(folder):
     os.mkdir(folder)
 
 
-def prepare_photos(filenames_and_scores):
+def prepare_photos():
     """Move selected photos to the static folder. Convert HEIC photos to JPEC. Change scores to percent. 
 
     Args:
@@ -61,15 +35,15 @@ def prepare_photos(filenames_and_scores):
         (list of tuples): tuples are (filename, score)
     """
 
-    static_folder = os.path.join(os.path.dirname('__file__'), 'static')
+    create_folder_if_not_exists('/opt/bestpix/static')
 
-    create_folder_if_not_exists(static_folder)
-
-    new_photos = []
+    filenames_and_scores = get_filenames_and_scores()
+    new_photos           = []
     for filename_and_score in filenames_and_scores:
-        score_as_percent = f"{round(filename_and_score[1]*100)}%"
+
         filename         = filename_and_score[0]
-        filepath         = os.path.join('/opt', 'bestpix_data', 'originals', filename[0], filename) 
+        score_as_percent = f"{round(filename_and_score[1]*100)}%"
+        filepath         = os.path.join('/opt/bestpix_data/static', filename) 
 
         if filename.endswith('heic'):
             heif_file = read_heif(filepath)
@@ -79,7 +53,7 @@ def prepare_photos(filenames_and_scores):
         else:
             image = Image.open(filepath)
 
-        image.save(os.path.join(static_folder, filename))
+        image.save(os.path.join('/opt/bestpix/static', filename))
 
         new_photos.append((score_as_percent, filename))
 
@@ -89,8 +63,7 @@ def prepare_photos(filenames_and_scores):
 @app.route('/')
 def home():
 
-    filenames_and_scores = get_best_photos_from_database()
-    prepared_photos      = prepare_photos(filenames_and_scores)
+    prepared_photos  = prepare_photos()
 
     return render_template('home.html', scores_and_photos = prepared_photos)
 
