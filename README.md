@@ -16,13 +16,16 @@ No data leaves your computer.
 
 
 ## Install 
+
 1. Install and start [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
-3. Open your terminal and run the command `pip install bestpix`
+2. Open your terminal and run the command `pip install bestpix`
 
 ## Use
+
 1. Import your iPhone's photos to your Mac. Official instructions [here](https://support.apple.com/en-us/HT201302#importmac)
 2. Open your terminal and run the command `reveal`
 3. Using your web browser, go to `localhost:8442`
 
 ## Uninstall 
+
 1. Open your terminal and run the command `cleanup`, then the command `pip3 uninstall bestpix`
