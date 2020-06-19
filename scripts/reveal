@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/bin/bash/python
 
 import os
 import time
@@ -11,21 +11,21 @@ time.sleep(1)
 photos_src = os.path.join(os.path.expanduser('~'), 'Pictures', 'Photos Library.photoslibrary')
 photos_dst = os.path.join(os.path.expanduser('~'), 'bestpix_data')
 
-print()
-print(f'Making empty folder at: {photos_dst}')
-print()
+print
+print 'Making empty folder at: {}'.format(photos_dst)
+print 
 
 if os.path.exists(photos_dst):
     shutil.rmtree(photos_dst)
 
-print('Copying folder contents:')
-print(f'    from: {photos_src}')
-print(f'      to: {photos_dst}')
-print()
+print 'Copying folder contents:'
+print '    from: {}'.format(photos_src)
+print '      to: {}'.format(photos_dst)
+print
 shutil.copytree(photos_src, photos_dst)
 
-command = f'docker run --rm -it -p 127.0.0.1:8442:8442 --volume {photos_dst}:/opt/bestpix_data bluehalswater/bestpix'
+command = 'docker run --rm -it -p 127.0.0.1:8442:8442 --volume {}:/opt/bestpix_data bluehalswater/bestpix'.format(photos_dst)
 
-print(f'Running command: {command}')
-print()
+print 'Running command: {}'.format(command)
+print
 os.system(command)
