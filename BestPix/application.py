@@ -20,14 +20,24 @@ def get_best_photos_from_database():
     db_path = os.path.join('/opt', 'bestpix_data', 'database', 'Photos.sqlite')
     cursor  = connect(db_path).cursor()
 
-    query_result = cursor.execute("""
+    try:
 
-    SELECT zfilename, 
-        zoverallaestheticscore 
-    FROM   zgenericasset 
-    ORDER  BY zoverallaestheticscore DESC 
+        query_result = cursor.execute("""
 
-    """).fetchall()
+        SELECT zfilename, 
+            zoverallaestheticscore 
+        FROM   zgenericasset 
+        ORDER  BY zoverallaestheticscore DESC 
+
+        """).fetchall()
+    
+    except:
+        print()
+        print()
+        print('Error: Photos.sqlite is empty. You must import your photos first. Guide here: https://support.apple.com/en-us/HT201302#importmac')
+        print()
+        print()
+        exit()
 
     return query_result[:NUMBER_OF_PHOTOS]
 
