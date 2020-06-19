@@ -6,13 +6,17 @@ Use your Mac to see the photos your iPhone thinks are best. Inspired by Simon Wi
 
 Each time you take a photo with your iPhone, a "beautifulness" score is given to that photo. This package shows you the 10 highest scoring photos.
 
+## Supported Platforms
+
+  * Mac 
+
 ## Privacy
 
 This package does not upload any data. 
 
 
 ## Install 
-1. Install and start [Docker Desktop](https://www.docker.com/products/docker-desktop)
+1. Install and start [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
 3. Open your terminal and run the command `pip install bestpix`
 
 ## Use
