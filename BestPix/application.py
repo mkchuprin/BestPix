@@ -6,7 +6,7 @@ from pyheif import read_heif
 from sqlite3 import connect
 from shutil import rmtree
 
-from .config import PHOTOS_PATH, NUMBER_OF_PHOTOS
+from .config import NUMBER_OF_PHOTOS
 
 app = Flask(__name__)
 

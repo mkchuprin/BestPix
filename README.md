@@ -12,8 +12,7 @@ This package does not upload any data.
 
 
 ## Install 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Start Docker (if it hasn't started)
+1. Install and start [Docker Desktop](https://www.docker.com/products/docker-desktop)
 3. Open your terminal and run the command `pip install bestpix`
 
 ## Use
