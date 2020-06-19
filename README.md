@@ -29,3 +29,4 @@ No data leaves your computer.
 ## Uninstall 
 
 1. Open your terminal and run the command `cleanup`, then the command `pip3 uninstall bestpix`
+2. Shutdown and uninstall Docker Desktop
