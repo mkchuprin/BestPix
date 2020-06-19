@@ -83,6 +83,6 @@ def home():
     return render_template('home.html', scores_and_photos = prepared_photos)
 
 
-if __name__ == '__main__':
+def main():
     app.run(debug=False, host="localhost", port=8442) 
 
