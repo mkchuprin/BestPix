@@ -1,8 +1,4 @@
 import os
-from flask import Flask, render_template, send_from_directory
-from PIL import Image
-from pprint import pprint
-from pyheif import read_heif
 import sqlite3
 import shutil
 
