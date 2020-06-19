@@ -12,7 +12,7 @@ Each time you take a photo with your iPhone, a "beautifulness" score is given to
 
 ## Privacy
 
-This package does not upload any data. 
+No data leaves your computer.
 
 
 ## Install 
