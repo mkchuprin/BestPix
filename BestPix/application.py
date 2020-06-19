@@ -39,6 +39,8 @@ def get_best_photos_from_database():
         print()
         exit()
 
+    print(f'Analyzing {len(query_result)} photos')
+
     return query_result[:NUMBER_OF_PHOTOS]
 
 def create_folder_if_not_exists(folder):
