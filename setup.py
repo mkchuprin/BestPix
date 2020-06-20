@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bestpix',
-    version='1.4.5',
+    version='1.4.7',
     author='Michael Chuprin',
     author_email='mkchuprin@gmail.com',
     long_description=open('README.md').read(),
