@@ -6,7 +6,7 @@ Inspired by Simon Willison's [Pelican post](https://simonwillison.net/2020/May/2
 
 ## Description 
 
-All of your iPhones photos are put through Apple's machine learning models to produce a table of "beautifulness" scores. This table is saved on your iPhone and copied to your MacBook when you import your Photos from your iPhone to your Macbook. This package will read that table to find the 10 most beautiful photos and display them for you in your browser. 
+All of the photos on your iPhone are put through Apple's machine learning models to produce a table of "beautifulness" scores. This table is stored on your iPhone and copied to your MacBook when you import your Photos to your Macbook. This package will read that table to find the 10 most beautiful photos and display them for you in your browser. 
 
 
 ## Supported Platforms
