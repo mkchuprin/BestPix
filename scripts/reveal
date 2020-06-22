@@ -1,5 +1,6 @@
 #!/bin/bash/python3
 
+
 import os
 import time
 import shutil
@@ -12,9 +13,15 @@ time.sleep(1)
 pi = PhotosInterface()
 pi.find_photos()
 
-command = f"docker run --rm -it -p 127.0.0.1:8442:8442 --volume {pi.temp_folder}:/opt/bestpix_data bluehalswater/bestpix"
+# Remove the docker container if there is one
+command_to_stop = 'docker stop bestpix || true && docker rm bestpix || true'
+os.system(command_to_stop)
+os.system('clear')
+
+# Start new container
+command_to_start = f"docker run --rm -it -p 127.0.0.1:8442:8442 --volume {pi.temp_folder}:/opt/bestpix_data --name bestpix bluehalswater/bestpix"
 
 print('Running command:')
-print(f'    {command}')
+print(f'    {command_to_start}')
 print()
-os.system(command)
+os.system(command_to_start)
