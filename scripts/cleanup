@@ -12,6 +12,8 @@ if os.path.exists(photos_dst):
 command_to_stop = 'docker stop bestpix || true && docker rm bestpix || true'
 os.system(command_to_stop)
 os.system('clear')
+print('Removed old docker container (if there was one)')
+
 
 print()
 print(f'Removing {photos_dst}')
