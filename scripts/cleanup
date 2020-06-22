@@ -16,6 +16,6 @@ print('Removed old docker container (if there was one)')
 
 
 print()
-print(f'Removing {photos_dst}')
+print(f'Removed old {photos_dst}')
 print()
 
