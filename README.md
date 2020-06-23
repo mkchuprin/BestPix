@@ -54,7 +54,7 @@ No data leaves your computer
    
     ![](gifs/openadocker.gif)
 
-3.  To start package, run `reveal`
+3.  Run `reveal`
    
      ![](gifs/reveal.gif)
 
