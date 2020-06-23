@@ -4,14 +4,14 @@ View your best photos by seeing what Apple's machine learning models rate them.
 Inspired by Simon Willison's [Pelican post](https://simonwillison.net/2020/May/21/dogsheep-photos/)!
 
 
-### Description 
+### Description
 
 All of the photos on your iPhone are put through Apple's machine learning models to produce "beautifulness" scores. These scores are stored on your iPhone and can be imported to your MacBook. This package allows you to see the 10 most beautiful photos in your browser.
 
 
 ### Supported Platforms
 
-  * Mac only 
+  * Mac only
 
 ### Privacy
 
