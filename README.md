@@ -27,7 +27,7 @@ No data leaves your computer
 
    ![](gifs/checkdocker.gif)
 
-     **Note** The exact version might change.
+     **Note**: The exact version might change.
 
 2. Download **Python 3** from [python.org](https://www.python.org/downloads/)
    
@@ -35,13 +35,13 @@ No data leaves your computer
 
    ![](gifs/checkpython3.gif)
 
-    **Note** The exact version might change
+    **Note**: The exact version might change
 
 3. Download **BestPix** by running `pip3 install bestpix`.
    
     ![](gifs/pip3installbestpix.gif)
 
-    **Note** The exact version might change
+    **Note**: The exact version might change
 
 ### Using
 
