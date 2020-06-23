@@ -20,5 +20,5 @@ os.system('cleanup')
 command = f"docker run --rm -it -p 127.0.0.1:8442:8442 --volume {pi.temp_folder}:/opt/bestpix_data --name bestpix bluehalswater/bestpix"
 
 print('Running command:')
-print(f'    {command}')
+print(f'    {command}\n')
 os.system(command)
