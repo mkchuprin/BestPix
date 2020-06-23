@@ -31,9 +31,9 @@ No data leaves your computer
 
     * You can get it from [docker.com](https://www.docker.com/products/docker-desktop) 
 
-2. You'll need  **Python 3** from [python.org](https://www.python.org/downloads/)
+2. You'll need  **Python 3**
    
-   * To check if you have it by running `python3 --version`
+   * Check if you have it by running `python3 --version`
 
        ![](gifs/checkpython3.gif)
 
