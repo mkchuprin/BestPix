@@ -21,21 +21,25 @@ No data leaves your computer
 
 ### Installing
 
-1. Download **Docker Desktop** from [docker.com](https://www.docker.com/products/docker-desktop)
+1. You'll need **Docker Desktop**
    
-   To check if you have it, run `docker --version`
+   * Check if you have it by running `docker --version`
 
-   ![](gifs/checkdocker.gif)
+     ![](gifs/checkdocker.gif)
 
      **Note**: The exact version might change.
 
-2. Download **Python 3** from [python.org](https://www.python.org/downloads/)
+    * You can get it from [docker.com](https://www.docker.com/products/docker-desktop) 
+
+2. You'll need  **Python 3** from [python.org](https://www.python.org/downloads/)
    
-   To check if you have it, run `python3 --version`
+   * To check if you have it by running `python3 --version`
 
-   ![](gifs/checkpython3.gif)
+       ![](gifs/checkpython3.gif)
 
-    **Note**: The exact version might change
+      **Note**: The exact version might change
+
+    * You can get it from [python.org](https://www.python.org/downloads/)
 
 3. Download **BestPix** by running `pip3 install bestpix`.
    
