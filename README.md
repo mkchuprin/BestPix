@@ -19,27 +19,47 @@ No data leaves your computer
 
 # Up and Running
 
-### Prerequisites
+### Installing
 
-* `Python3`, which can be installed from [www.python.org](https://www.python.org/downloads/)
-    * You're good if running `python3` in your terminal shows ![](2020-06-22-14-45-05.png)
-* `Docker Desktop`, which can be installed from [www.docker.com](https://www.docker.com/products/docker-desktop)
+1. Download **Docker Desktop** from [docker.com](https://www.docker.com/products/docker-desktop)
+   
+   To check if you have it, run `docker --version`
 
+   ![](gifs/checkdocker.gif)
 
-### Install 
+     **Note** The exact version might change.
 
-1. Open your terminal and run the command `pip3 install bestpix`
-    * You're good if you see ![](2020-06-22-14-52-22.png)
+2. Download **Python 3** from [python.org](https://www.python.org/downloads/)
+   
+   To check if you have it, run `python3 --version`
 
-### Use
+   ![](gifs/checkpython3.gif)
+
+    **Note** The exact version might change
+
+3. Download **BestPix** by running `pip3 install bestpix`.
+   
+    ![](gifs/pip3installbestpix.gif)
+
+    **Note** The exact version might change
+
+### Using
 
 1. Import your iPhone's photos to your Mac. Official instructions [here](https://support.apple.com/en-us/HT201302#importmac)
-2. Start Docker Desktop by opening your terminal and running `open -a Docker`
-   * You're good if you see a ![](2020-06-22-14-47-32.png) in your Menubar
-3. Start the package by opening your terminal and running `reveal`
+2. To start Docker Desktop, run `open -a Docker`
+   
+    ![](gifs/openadocker.gif)
+
+3.  To start package, run `reveal`
+   
+     ![](gifs/reveal.gif)
+
 4. View the results by opening your web browser and going to the url `localhost:8442`
 
-### Uninstall 
+    ![](gifs/localhost.gif)
+
+### Uninstalling
 
 1. Open your terminal and run the command `cleanup`, then the command `pip3 uninstall bestpix`
-2. Shutdown and uninstall Docker Desktop as you would any Application. Official instructions [here](https://support.apple.com/en-us/HT202235)
+   ![](gifs/cleanup.gif)
+2. Uninstall Docker Desktop as you would any Application. Official instructions [here](https://support.apple.com/en-us/HT202235)
