@@ -9,9 +9,8 @@ if os.path.exists(photos_dst):
     shutil.rmtree(photos_dst)
 
 # Remove the docker container if there is one
-command_to_stop = 'docker stop bestpix || true && docker rm bestpix || true'
+command_to_stop = '(docker stop bestpix || true && docker rm bestpix || true) 2>/dev/null'
 os.system(command_to_stop)
-os.system('clear')
 print('Removed old docker container (if there was one)')
 
 
