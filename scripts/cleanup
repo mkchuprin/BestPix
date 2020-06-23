@@ -3,9 +3,9 @@
 import os
 import shutil
 
+photos_dst = os.path.join(os.path.expanduser('~'), 'bestpix_data')
 
 print(f'Removing folder: {photos_dst}')
-photos_dst = os.path.join(os.path.expanduser('~'), 'bestpix_data')
 if os.path.exists(photos_dst):
     shutil.rmtree(photos_dst)
 

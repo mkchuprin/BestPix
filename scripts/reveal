@@ -8,7 +8,7 @@ import shutil
 from bestpix import PhotosInterface
 
 os.system('clear')
-time.sleep(1)
+time.sleep(2)
 
 pi = PhotosInterface()
 pi.find_photos()
@@ -17,9 +17,8 @@ pi.find_photos()
 os.system('cleanup')
 
 # Start new container
-command_to_start = f"docker run --rm -it -p 127.0.0.1:8442:8442 --volume {pi.temp_folder}:/opt/bestpix_data --name bestpix bluehalswater/bestpix"
+command = f"docker run --rm -it -p 127.0.0.1:8442:8442 --volume {pi.temp_folder}:/opt/bestpix_data --name bestpix bluehalswater/bestpix"
 
 print('Running command:')
-print(f'    {command_to_start}')
-print()
-os.system(command_to_start)
+print(f'    {command}')
+os.system(command)
