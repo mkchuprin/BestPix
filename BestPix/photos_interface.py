@@ -12,6 +12,23 @@ class PhotosInterface:
         self._default_originals_folder = os.path.join(self._default_photos_folder, 'originals')
         self.temp_folder               = os.path.join(os.path.expanduser('~'), 'bestpix_data')
 
+    def find_photos(self, number_of_photos = 10):
+        """
+        Create a csv file containing the filepaths to the best photos and their scores.
+        Move the best photos to the [_temp_db_location]/static folder
+        """
+        self.delete_temp_folder()
+        self._copy_database()
+
+        filenames_and_scores = self._run_query()
+        filenames_and_scores = self._filter_only_photos(filenames_and_scores, number_of_photos)
+
+        self._save_results(filenames_and_scores)
+
+        self._save_best_photos_to_static_folder(filenames_and_scores)
+
+        self._cleanup()
+
     def delete_temp_folder(self):
 
         if os.path.exists(self.temp_folder):
@@ -113,19 +130,3 @@ class PhotosInterface:
                     shutil.rmtree(filepath)
 
 
-    def find_photos(self, number_of_photos = 10):
-        """
-        Create a csv file containing the filepaths to the best photos and their scores.
-        Move the best photos to the [_temp_db_location]/static folder
-        """
-        self.delete_temp_folder()
-        self._copy_database()
-
-        filenames_and_scores = self._run_query()
-        filenames_and_scores = self._filter_only_photos(filenames_and_scores, number_of_photos)
-
-        self._save_results(filenames_and_scores)
-
-        self._save_best_photos_to_static_folder(filenames_and_scores)
-
-        self._cleanup()
