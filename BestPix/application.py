@@ -8,6 +8,8 @@ from shutil import rmtree
 
 NUMBER_OF_PHOTOS = 10
 
+# TODO https://stackoverflow.com/questions/54395735/how-to-work-with-heic-image-file-types-in-python
+
 app = Flask(__name__)
 
 def get_filenames_and_scores():
